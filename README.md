@@ -275,18 +275,15 @@ Planned extensions:
 ## Screenshots
 
 Add screenshots here when publishing to GitHub:
-- main dashboard
-- product / retention / city views
-- CDC events table
+<img width="1914" height="824" alt="image" src="https://github.com/user-attachments/assets/22031469-e7bf-41d0-9b4b-fdbcdb458a7a" />
+
+<img width="1569" height="904" alt="image (1)" src="https://github.com/user-attachments/assets/4e834207-3b69-49c6-9810-1334ff5ce9f4" />
+
+
+<img width="1522" height="629" alt="image (2)" src="https://github.com/user-attachments/assets/1af5a676-096b-4bf1-ac7c-f81edac7ab86" />
+
 - architecture diagram
 
-Example section:
-
-```md
-![Main Dashboard](./screenshots/dashboard-main.png)
-![Revenue and Retention](./screenshots/dashboard-retention.png)
-![CDC Events](./screenshots/cdc-events.png)
-```
 
 ---
 
