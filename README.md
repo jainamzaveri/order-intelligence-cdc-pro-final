@@ -283,7 +283,8 @@ Add screenshots here when publishing to GitHub:
 
 <img width="1522" height="629" alt="image (2)" src="https://github.com/user-attachments/assets/1af5a676-096b-4bf1-ac7c-f81edac7ab86" />
 
-- architecture diagram
+<img width="551" height="710" alt="image" src="https://github.com/user-attachments/assets/10aaf8ec-d681-4d0a-bae2-0a4e7a820f29" />
+
 
 
 ---
