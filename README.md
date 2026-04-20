@@ -6,7 +6,8 @@ An end-to-end local data engineering project that captures order data changes fr
 
 This project simulates an e-commerce analytics pipeline with a more realistic workflow than a simple batch ETL demo.
 
-It includes:
+It includes:'
+
 - **PostgreSQL** as the transactional source database
 - **Debezium + Kafka Connect** for CDC from Postgres
 - **Kafka** as the event transport layer
@@ -22,7 +23,7 @@ The result is a local, portfolio-ready data engineering project that shows both 
 ## Architecture
 
 ```text
-PostgreSQL
+   -> PostgreSQL
    -> Debezium PostgreSQL Connector
    -> Kafka topics
    -> Python CDC consumer
