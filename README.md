@@ -287,6 +287,3 @@ Add screenshots here when publishing to GitHub:
 
 ---
 
-## License
-
-This project is for learning and portfolio use.
