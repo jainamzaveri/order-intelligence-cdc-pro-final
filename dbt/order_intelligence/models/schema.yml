@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: orders_summary
+    columns:
+      - name: status
+        tests:
+          - not_null
+  - name: top_customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+  - name: revenue_by_city
+    columns:
+      - name: city
+        tests:
+          - not_null
+  - name: top_products
+    columns:
+      - name: product_id
+        tests:
+          - not_null

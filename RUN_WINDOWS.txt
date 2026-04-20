@@ -1,0 +1,36 @@
+STEP 1
+pip install -r requirements.txt
+
+STEP 2
+Docker Desktop must be open.
+Then run:
+docker compose up -d
+
+STEP 3
+Run source data loader:
+python scripts/seed_postgres.py
+
+STEP 4
+Register Debezium connector:
+python connector/register_connector.py
+
+STEP 5
+Open a new terminal and keep this running:
+python consumer/consumer.py
+
+STEP 6
+Back in the first terminal, create live CDC events:
+python scripts/trigger_changes.py
+
+STEP 7
+Build analytics marts:
+python scripts/run_dbt.py
+
+STEP 8
+Start the polished dashboard:
+streamlit run dashboard/app.py
+
+STEP 9
+Open the local Streamlit URL in your browser.
+Usually:
+http://localhost:8501

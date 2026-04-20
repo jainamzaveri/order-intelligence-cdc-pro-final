@@ -1,0 +1,14 @@
+name: 'order_intelligence'
+version: '1.0.0'
+config-version: 2
+
+profile: 'order_intelligence'
+
+model-paths: ["models"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  order_intelligence:
+    +materialized: table

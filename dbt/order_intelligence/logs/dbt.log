@@ -1,0 +1,1637 @@
+[0m21:02:59.316345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001660A2D7A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016608064410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001660B537C50>]}
+
+
+============================== 21:02:59.335944 | 5757f70f-3ebd-4b90-a530-506540eedfff ==============================
+[0m21:02:59.335944 [info ] [MainThread]: Running with dbt=1.10.20
+[0m21:02:59.341928 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DEVANSHI\\Downloads\\order-intelligence-cdc-pro-final\\order-intelligence-cdc-pro-final\\dbt\\order_intelligence\\logs'}
+[0m21:02:59.460965 [info ] [MainThread]: dbt version: 1.10.20
+[0m21:02:59.462246 [info ] [MainThread]: python version: 3.13.2
+[0m21:02:59.463351 [info ] [MainThread]: python path: C:\Users\DEVANSHI\AppData\Local\Programs\Python\Python313\python.exe
+[0m21:02:59.463799 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m21:03:00.312438 [info ] [MainThread]: Using profiles dir at .
+[0m21:03:00.313802 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m21:03:00.315095 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\dbt_project.yml
+[0m21:03:00.320987 [info ] [MainThread]: adapter type: duckdb
+[0m21:03:00.321734 [info ] [MainThread]: adapter version: 1.10.1
+[0m21:03:00.474016 [info ] [MainThread]: Configuration:
+[0m21:03:00.474819 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:03:00.476082 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:03:00.476646 [info ] [MainThread]: Required dependencies:
+[0m21:03:00.477676 [debug] [MainThread]: Executing "git --help"
+[0m21:03:00.737894 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:03:00.738867 [debug] [MainThread]: STDERR: "b''"
+[0m21:03:00.739951 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:03:00.742012 [info ] [MainThread]: Connection:
+[0m21:03:00.742775 [info ] [MainThread]:   database: order_intelligence
+[0m21:03:00.743649 [info ] [MainThread]:   schema: main
+[0m21:03:00.745925 [info ] [MainThread]:   path: ../../data/order_intelligence.duckdb
+[0m21:03:00.749300 [info ] [MainThread]:   config_options: None
+[0m21:03:00.750023 [info ] [MainThread]:   extensions: None
+[0m21:03:00.751047 [info ] [MainThread]:   settings: {}
+[0m21:03:00.752134 [info ] [MainThread]:   external_root: .
+[0m21:03:00.752727 [info ] [MainThread]:   use_credential_provider: None
+[0m21:03:00.753209 [info ] [MainThread]:   attach: None
+[0m21:03:00.753626 [info ] [MainThread]:   filesystems: None
+[0m21:03:00.754148 [info ] [MainThread]:   remote: None
+[0m21:03:00.755088 [info ] [MainThread]:   plugins: None
+[0m21:03:00.755773 [info ] [MainThread]:   disable_transactions: False
+[0m21:03:00.757955 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:03:05.697281 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m21:03:08.012660 [debug] [MainThread]: Using duckdb connection "debug"
+[0m21:03:08.013459 [debug] [MainThread]: On debug: select 1 as id
+[0m21:03:08.014595 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:03:08.143112 [debug] [MainThread]: SQL status: OK in 0.128 seconds
+[0m21:03:08.146938 [debug] [MainThread]: On debug: Close
+[0m21:03:08.148054 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:03:08.149524 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:03:08.163991 [debug] [MainThread]: Command `dbt debug` succeeded at 21:03:08.159786 after 10.29 seconds
+[0m21:03:08.168505 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:03:08.174517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001660C917A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001660C9AAB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001660C5A78A0>]}
+[0m21:03:08.182311 [debug] [MainThread]: Flushing usage events
+[0m21:03:08.808438 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:03:19.421867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020017BCFA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020015964410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020018E3FB10>]}
+
+
+============================== 21:03:19.432354 | a3b84c26-7154-4092-ad92-03a6b2d367b4 ==============================
+[0m21:03:19.432354 [info ] [MainThread]: Running with dbt=1.10.20
+[0m21:03:19.433578 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DEVANSHI\\Downloads\\order-intelligence-cdc-pro-final\\order-intelligence-cdc-pro-final\\dbt\\order_intelligence\\logs'}
+[0m21:03:20.482237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020018184180>]}
+[0m21:03:20.546266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020019F116A0>]}
+[0m21:03:20.549738 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:03:21.152614 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m21:03:21.154713 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:03:21.157304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020019ED6350>]}
+[0m21:03:24.605520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A36C6E0>]}
+[0m21:03:24.768740 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:03:26.507470 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:03:26.607974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A6C4750>]}
+[0m21:03:26.608925 [info ] [MainThread]: Found 6 models, 4 data tests, 475 macros
+[0m21:03:26.613343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A3976C0>]}
+[0m21:03:26.620123 [info ] [MainThread]: 
+[0m21:03:26.620904 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:03:26.621282 [info ] [MainThread]: 
+[0m21:03:26.623202 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:03:26.629501 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_order_intelligence'
+[0m21:03:26.741826 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence"
+[0m21:03:26.742268 [debug] [ThreadPool]: On list_order_intelligence: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "list_order_intelligence"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"order_intelligence"'
+    
+  
+  
+[0m21:03:26.742652 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:03:26.819320 [debug] [ThreadPool]: SQL status: OK in 0.077 seconds
+[0m21:03:26.822073 [debug] [ThreadPool]: On list_order_intelligence: Close
+[0m21:03:26.823221 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_order_intelligence, now create_order_intelligence_main)
+[0m21:03:26.824141 [debug] [ThreadPool]: Creating schema "database: "order_intelligence"
+schema: "main"
+"
+[0m21:03:26.831071 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:03:26.831654 [debug] [ThreadPool]: On create_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "create_order_intelligence_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='order_intelligence'
+        and type='sqlite'
+    
+  
+[0m21:03:26.832516 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:03:26.834179 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:03:26.835545 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:03:26.835849 [debug] [ThreadPool]: On create_order_intelligence_main: BEGIN
+[0m21:03:26.836654 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:03:26.837039 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:03:26.837406 [debug] [ThreadPool]: On create_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "create_order_intelligence_main"} */
+
+    
+    
+        create schema if not exists "order_intelligence"."main"
+    
+[0m21:03:26.839492 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:03:26.840429 [debug] [ThreadPool]: On create_order_intelligence_main: COMMIT
+[0m21:03:26.840788 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:03:26.841040 [debug] [ThreadPool]: On create_order_intelligence_main: COMMIT
+[0m21:03:26.841520 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:03:26.841758 [debug] [ThreadPool]: On create_order_intelligence_main: Close
+[0m21:03:26.843572 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_order_intelligence_main'
+[0m21:03:26.849712 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:03:26.850151 [debug] [ThreadPool]: On list_order_intelligence_main: BEGIN
+[0m21:03:26.851120 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:03:26.851754 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:03:26.852121 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:03:26.852468 [debug] [ThreadPool]: On list_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "list_order_intelligence_main"} */
+select
+      'order_intelligence' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'order_intelligence'
+  
+[0m21:03:26.864575 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m21:03:26.866402 [debug] [ThreadPool]: On list_order_intelligence_main: ROLLBACK
+[0m21:03:26.895535 [debug] [ThreadPool]: Failed to rollback 'list_order_intelligence_main'
+[0m21:03:26.896001 [debug] [ThreadPool]: On list_order_intelligence_main: Close
+[0m21:03:26.897962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A372A50>]}
+[0m21:03:26.898524 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:26.898926 [debug] [MainThread]: On master: BEGIN
+[0m21:03:26.899224 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:03:26.899928 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:03:26.900200 [debug] [MainThread]: On master: COMMIT
+[0m21:03:26.900434 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:26.900661 [debug] [MainThread]: On master: COMMIT
+[0m21:03:26.901075 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:03:26.901342 [debug] [MainThread]: On master: Close
+[0m21:03:26.959298 [debug] [Thread-1 (]: Began running node model.order_intelligence.customer_retention
+[0m21:03:26.960290 [info ] [Thread-1 (]: 1 of 6 START sql table model main.customer_retention ........................... [RUN]
+[0m21:03:26.962684 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.order_intelligence.customer_retention'
+[0m21:03:26.963685 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.customer_retention
+[0m21:03:26.972315 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.customer_retention"
+[0m21:03:26.976471 [debug] [Thread-1 (]: Began executing node model.order_intelligence.customer_retention
+[0m21:03:27.012282 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.customer_retention"
+[0m21:03:27.015597 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:03:27.016063 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: BEGIN
+[0m21:03:27.016365 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:03:27.017329 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.017657 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:03:27.018011 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."customer_retention__dbt_tmp"
+  
+    as (
+      with customer_orders as (
+  select
+    customer_id,
+    count(*) as total_orders,
+    round(sum(case when status != 'canceled' then total_amount else 0 end), 2) as lifetime_revenue
+  from orders_current
+  group by customer_id
+)
+select
+  c.customer_id,
+  c.customer_name,
+  c.city,
+  c.loyalty_tier,
+  co.total_orders,
+  co.lifetime_revenue,
+  case when co.total_orders > 1 then 'repeat' else 'one_time' end as customer_type
+from customer_orders co
+join customers_current c
+  on co.customer_id = c.customer_id
+order by co.lifetime_revenue desc
+    );
+  
+  
+[0m21:03:27.063545 [debug] [Thread-1 (]: SQL status: OK in 0.045 seconds
+[0m21:03:27.071756 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:03:27.072357 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+alter table "order_intelligence"."main"."customer_retention__dbt_tmp" rename to "customer_retention"
+[0m21:03:27.076200 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:03:27.093236 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: COMMIT
+[0m21:03:27.093751 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:03:27.094054 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: COMMIT
+[0m21:03:27.101559 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m21:03:27.109966 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:03:27.110598 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+
+      drop table if exists "order_intelligence"."main"."customer_retention__dbt_backup" cascade
+    
+[0m21:03:27.112745 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:03:27.116158 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: Close
+[0m21:03:27.121401 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A5A35F0>]}
+[0m21:03:27.122454 [info ] [Thread-1 (]: 1 of 6 OK created sql table model main.customer_retention ...................... [[32mOK[0m in 0.16s]
+[0m21:03:27.123854 [debug] [Thread-1 (]: Finished running node model.order_intelligence.customer_retention
+[0m21:03:27.124435 [debug] [Thread-1 (]: Began running node model.order_intelligence.hourly_kpis
+[0m21:03:27.125470 [info ] [Thread-1 (]: 2 of 6 START sql table model main.hourly_kpis .................................. [RUN]
+[0m21:03:27.126292 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.customer_retention, now model.order_intelligence.hourly_kpis)
+[0m21:03:27.126836 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.hourly_kpis
+[0m21:03:27.128997 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.hourly_kpis"
+[0m21:03:27.132159 [debug] [Thread-1 (]: Began executing node model.order_intelligence.hourly_kpis
+[0m21:03:27.136565 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.hourly_kpis"
+[0m21:03:27.140388 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:03:27.141184 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: BEGIN
+[0m21:03:27.141740 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:27.143044 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.143516 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:03:27.143984 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."hourly_kpis__dbt_tmp"
+  
+    as (
+      select
+  date_trunc('hour', order_ts) as order_hour,
+  count(*) as orders,
+  round(sum(case when status != 'canceled' then total_amount else 0 end), 2) as revenue,
+  round(avg(case when status != 'canceled' then total_amount end), 2) as avg_order_value
+from orders_current
+group by 1
+order by 1
+    );
+  
+  
+[0m21:03:27.151861 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m21:03:27.157165 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:03:27.157923 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+alter table "order_intelligence"."main"."hourly_kpis__dbt_tmp" rename to "hourly_kpis"
+[0m21:03:27.159212 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.161297 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: COMMIT
+[0m21:03:27.161942 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:03:27.162391 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: COMMIT
+[0m21:03:27.166171 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:03:27.169238 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:03:27.169765 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+
+      drop table if exists "order_intelligence"."main"."hourly_kpis__dbt_backup" cascade
+    
+[0m21:03:27.170926 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:03:27.173404 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: Close
+[0m21:03:27.174321 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001AB56A30>]}
+[0m21:03:27.175070 [info ] [Thread-1 (]: 2 of 6 OK created sql table model main.hourly_kpis ............................. [[32mOK[0m in 0.05s]
+[0m21:03:27.176086 [debug] [Thread-1 (]: Finished running node model.order_intelligence.hourly_kpis
+[0m21:03:27.176739 [debug] [Thread-1 (]: Began running node model.order_intelligence.orders_summary
+[0m21:03:27.177858 [info ] [Thread-1 (]: 3 of 6 START sql table model main.orders_summary ............................... [RUN]
+[0m21:03:27.178599 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.hourly_kpis, now model.order_intelligence.orders_summary)
+[0m21:03:27.179020 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.orders_summary
+[0m21:03:27.181084 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.orders_summary"
+[0m21:03:27.183164 [debug] [Thread-1 (]: Began executing node model.order_intelligence.orders_summary
+[0m21:03:27.187769 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.orders_summary"
+[0m21:03:27.190835 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:03:27.191521 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: BEGIN
+[0m21:03:27.192009 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:27.192903 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.193288 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:03:27.193620 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."orders_summary__dbt_tmp"
+  
+    as (
+      select
+  status,
+  count(*) as order_count,
+  round(sum(total_amount), 2) as revenue,
+  round(avg(total_amount), 2) as avg_order_value
+from orders_current
+where status is not null
+group by status
+order by revenue desc
+    );
+  
+  
+[0m21:03:27.198439 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:03:27.202705 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:03:27.203312 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+alter table "order_intelligence"."main"."orders_summary__dbt_tmp" rename to "orders_summary"
+[0m21:03:27.204702 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.207604 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: COMMIT
+[0m21:03:27.208293 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:03:27.208711 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: COMMIT
+[0m21:03:27.213469 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:03:27.217103 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:03:27.217590 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+
+      drop table if exists "order_intelligence"."main"."orders_summary__dbt_backup" cascade
+    
+[0m21:03:27.218465 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:03:27.220377 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: Close
+[0m21:03:27.221199 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001AA05AD0>]}
+[0m21:03:27.222842 [info ] [Thread-1 (]: 3 of 6 OK created sql table model main.orders_summary .......................... [[32mOK[0m in 0.04s]
+[0m21:03:27.223716 [debug] [Thread-1 (]: Finished running node model.order_intelligence.orders_summary
+[0m21:03:27.224182 [debug] [Thread-1 (]: Began running node model.order_intelligence.revenue_by_city
+[0m21:03:27.224924 [info ] [Thread-1 (]: 4 of 6 START sql table model main.revenue_by_city .............................. [RUN]
+[0m21:03:27.226330 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.orders_summary, now model.order_intelligence.revenue_by_city)
+[0m21:03:27.226872 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.revenue_by_city
+[0m21:03:27.229409 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.revenue_by_city"
+[0m21:03:27.231243 [debug] [Thread-1 (]: Began executing node model.order_intelligence.revenue_by_city
+[0m21:03:27.235793 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.revenue_by_city"
+[0m21:03:27.238138 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:03:27.239062 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: BEGIN
+[0m21:03:27.239972 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:27.241330 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.241753 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:03:27.242322 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."revenue_by_city__dbt_tmp"
+  
+    as (
+      select
+  c.city,
+  count(o.order_id) as orders,
+  round(sum(case when o.status != 'canceled' then o.total_amount else 0 end), 2) as revenue,
+  round(avg(case when o.status != 'canceled' then o.total_amount end), 2) as avg_order_value
+from orders_current o
+join customers_current c
+  on o.customer_id = c.customer_id
+group by c.city
+order by revenue desc
+    );
+  
+  
+[0m21:03:27.247640 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:03:27.253421 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:03:27.254079 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+alter table "order_intelligence"."main"."revenue_by_city__dbt_tmp" rename to "revenue_by_city"
+[0m21:03:27.255258 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.257734 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: COMMIT
+[0m21:03:27.258887 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:03:27.259318 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: COMMIT
+[0m21:03:27.264138 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:03:27.267231 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:03:27.267755 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+
+      drop table if exists "order_intelligence"."main"."revenue_by_city__dbt_backup" cascade
+    
+[0m21:03:27.268565 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:03:27.269960 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: Close
+[0m21:03:27.270637 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A5E8280>]}
+[0m21:03:27.271434 [info ] [Thread-1 (]: 4 of 6 OK created sql table model main.revenue_by_city ......................... [[32mOK[0m in 0.04s]
+[0m21:03:27.273246 [debug] [Thread-1 (]: Finished running node model.order_intelligence.revenue_by_city
+[0m21:03:27.274127 [debug] [Thread-1 (]: Began running node model.order_intelligence.top_customers
+[0m21:03:27.275293 [info ] [Thread-1 (]: 5 of 6 START sql table model main.top_customers ................................ [RUN]
+[0m21:03:27.276063 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.revenue_by_city, now model.order_intelligence.top_customers)
+[0m21:03:27.276483 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.top_customers
+[0m21:03:27.284364 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.top_customers"
+[0m21:03:27.286486 [debug] [Thread-1 (]: Began executing node model.order_intelligence.top_customers
+[0m21:03:27.296829 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.top_customers"
+[0m21:03:27.307435 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:03:27.308217 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: BEGIN
+[0m21:03:27.308777 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:27.311186 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:03:27.311646 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:03:27.312702 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."top_customers__dbt_tmp"
+  
+    as (
+      select
+  c.customer_id,
+  c.customer_name,
+  c.city,
+  c.loyalty_tier,
+  count(o.order_id) as num_orders,
+  round(sum(case when o.status != 'canceled' then o.total_amount else 0 end), 2) as total_spent,
+  round(avg(case when o.status != 'canceled' then o.total_amount end), 2) as avg_order_value
+from orders_current o
+join customers_current c
+  on o.customer_id = c.customer_id
+group by c.customer_id, c.customer_name, c.city, c.loyalty_tier
+order by total_spent desc
+limit 20
+    );
+  
+  
+[0m21:03:27.336416 [debug] [Thread-1 (]: SQL status: OK in 0.023 seconds
+[0m21:03:27.340730 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:03:27.341434 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+alter table "order_intelligence"."main"."top_customers__dbt_tmp" rename to "top_customers"
+[0m21:03:27.342700 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.345078 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: COMMIT
+[0m21:03:27.345737 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:03:27.346235 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: COMMIT
+[0m21:03:27.351269 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:03:27.353874 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:03:27.354612 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+
+      drop table if exists "order_intelligence"."main"."top_customers__dbt_backup" cascade
+    
+[0m21:03:27.355895 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.357238 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: Close
+[0m21:03:27.358091 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001AAEF890>]}
+[0m21:03:27.359558 [info ] [Thread-1 (]: 5 of 6 OK created sql table model main.top_customers ........................... [[32mOK[0m in 0.08s]
+[0m21:03:27.361001 [debug] [Thread-1 (]: Finished running node model.order_intelligence.top_customers
+[0m21:03:27.362017 [debug] [Thread-1 (]: Began running node model.order_intelligence.top_products
+[0m21:03:27.363007 [info ] [Thread-1 (]: 6 of 6 START sql table model main.top_products ................................. [RUN]
+[0m21:03:27.363734 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.top_customers, now model.order_intelligence.top_products)
+[0m21:03:27.364183 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.top_products
+[0m21:03:27.366077 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.top_products"
+[0m21:03:27.368044 [debug] [Thread-1 (]: Began executing node model.order_intelligence.top_products
+[0m21:03:27.375662 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.top_products"
+[0m21:03:27.377857 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:03:27.379137 [debug] [Thread-1 (]: On model.order_intelligence.top_products: BEGIN
+[0m21:03:27.379774 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:27.381298 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.381808 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:03:27.382211 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."top_products__dbt_tmp"
+  
+    as (
+      select
+  p.product_id,
+  p.product_name,
+  p.category,
+  sum(oi.quantity) as units_sold,
+  round(sum(case when o.status != 'canceled' then oi.line_amount else 0 end), 2) as revenue
+from order_items_current oi
+join orders_current o
+  on oi.order_id = o.order_id
+join products_current p
+  on oi.product_id = p.product_id
+group by p.product_id, p.product_name, p.category
+order by revenue desc
+limit 20
+    );
+  
+  
+[0m21:03:27.396269 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m21:03:27.401817 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:03:27.402563 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+alter table "order_intelligence"."main"."top_products__dbt_tmp" rename to "top_products"
+[0m21:03:27.404389 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.407933 [debug] [Thread-1 (]: On model.order_intelligence.top_products: COMMIT
+[0m21:03:27.408914 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:03:27.409707 [debug] [Thread-1 (]: On model.order_intelligence.top_products: COMMIT
+[0m21:03:27.414686 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:03:27.419071 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:03:27.419882 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+
+      drop table if exists "order_intelligence"."main"."top_products__dbt_backup" cascade
+    
+[0m21:03:27.421390 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:27.423801 [debug] [Thread-1 (]: On model.order_intelligence.top_products: Close
+[0m21:03:27.424584 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3b84c26-7154-4092-ad92-03a6b2d367b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A00BF50>]}
+[0m21:03:27.425633 [info ] [Thread-1 (]: 6 of 6 OK created sql table model main.top_products ............................ [[32mOK[0m in 0.06s]
+[0m21:03:27.426773 [debug] [Thread-1 (]: Finished running node model.order_intelligence.top_products
+[0m21:03:27.430409 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:27.431168 [debug] [MainThread]: On master: BEGIN
+[0m21:03:27.431788 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:03:27.432958 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:03:27.433489 [debug] [MainThread]: On master: COMMIT
+[0m21:03:27.433887 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:27.434341 [debug] [MainThread]: On master: COMMIT
+[0m21:03:27.435127 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:03:27.435566 [debug] [MainThread]: On master: Close
+[0m21:03:27.436161 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:03:27.436685 [debug] [MainThread]: Connection 'create_order_intelligence_main' was properly closed.
+[0m21:03:27.437102 [debug] [MainThread]: Connection 'list_order_intelligence_main' was properly closed.
+[0m21:03:27.437550 [debug] [MainThread]: Connection 'model.order_intelligence.top_products' was properly closed.
+[0m21:03:27.438458 [info ] [MainThread]: 
+[0m21:03:27.439991 [info ] [MainThread]: Finished running 6 table models in 0 hours 0 minutes and 0.82 seconds (0.82s).
+[0m21:03:27.443184 [debug] [MainThread]: Command end result
+[0m21:03:27.478836 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:03:27.483494 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:03:27.494793 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\run_results.json
+[0m21:03:27.495453 [info ] [MainThread]: 
+[0m21:03:27.496165 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:03:27.496890 [info ] [MainThread]: 
+[0m21:03:27.497771 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:03:27.499464 [debug] [MainThread]: Command `dbt run` succeeded at 21:03:27.499277 after 8.57 seconds
+[0m21:03:27.500191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020018013170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001A175190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001AB47E30>]}
+[0m21:03:27.500789 [debug] [MainThread]: Flushing usage events
+[0m21:03:28.158487 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:03:50.620552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5E8E07A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5E6B84410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB03FB10>]}
+
+
+============================== 21:03:50.629253 | c1c9148a-f2e0-4d29-85ab-49f0f923b5a4 ==============================
+[0m21:03:50.629253 [info ] [MainThread]: Running with dbt=1.10.20
+[0m21:03:50.631033 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DEVANSHI\\Downloads\\order-intelligence-cdc-pro-final\\order-intelligence-cdc-pro-final\\dbt\\order_intelligence\\logs'}
+[0m21:03:51.087927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c1c9148a-f2e0-4d29-85ab-49f0f923b5a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5E93B4180>]}
+[0m21:03:51.143549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c1c9148a-f2e0-4d29-85ab-49f0f923b5a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB14D6A0>]}
+[0m21:03:51.146726 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:03:53.780433 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m21:03:54.196372 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:03:54.196772 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:03:54.232529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c1c9148a-f2e0-4d29-85ab-49f0f923b5a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB5D1E50>]}
+[0m21:03:54.311473 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:03:54.315900 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:03:54.387669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c1c9148a-f2e0-4d29-85ab-49f0f923b5a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB8363F0>]}
+[0m21:03:54.388281 [info ] [MainThread]: Found 6 models, 4 data tests, 475 macros
+[0m21:03:54.388780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1c9148a-f2e0-4d29-85ab-49f0f923b5a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB39F150>]}
+[0m21:03:54.391657 [info ] [MainThread]: 
+[0m21:03:54.392555 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:03:54.393166 [info ] [MainThread]: 
+[0m21:03:54.393997 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:03:54.400483 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_order_intelligence_main'
+[0m21:03:54.606581 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:03:54.607040 [debug] [ThreadPool]: On list_order_intelligence_main: BEGIN
+[0m21:03:54.607344 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:03:54.691170 [debug] [ThreadPool]: SQL status: OK in 0.084 seconds
+[0m21:03:54.691683 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:03:54.692024 [debug] [ThreadPool]: On list_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "list_order_intelligence_main"} */
+select
+      'order_intelligence' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'order_intelligence'
+  
+[0m21:03:54.733719 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m21:03:54.737433 [debug] [ThreadPool]: On list_order_intelligence_main: ROLLBACK
+[0m21:03:54.740431 [debug] [ThreadPool]: Failed to rollback 'list_order_intelligence_main'
+[0m21:03:54.740963 [debug] [ThreadPool]: On list_order_intelligence_main: Close
+[0m21:03:54.743984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1c9148a-f2e0-4d29-85ab-49f0f923b5a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EBBD0BB0>]}
+[0m21:03:54.744532 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:54.744806 [debug] [MainThread]: On master: BEGIN
+[0m21:03:54.745026 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:03:54.745693 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:03:54.746059 [debug] [MainThread]: On master: COMMIT
+[0m21:03:54.746301 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:54.746595 [debug] [MainThread]: On master: COMMIT
+[0m21:03:54.747239 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:03:54.747618 [debug] [MainThread]: On master: Close
+[0m21:03:54.754431 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:03:54.755392 [info ] [Thread-1 (]: 1 of 4 START test not_null_orders_summary_status ............................... [RUN]
+[0m21:03:54.756080 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.order_intelligence.not_null_orders_summary_status.a7e9568b2a'
+[0m21:03:54.756921 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:03:54.780069 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:03:54.783090 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:03:54.805576 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:03:54.807950 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:03:54.808545 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: BEGIN
+[0m21:03:54.808883 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:03:54.809836 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.810142 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:03:54.810511 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select status
+from "order_intelligence"."main"."orders_summary"
+where status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:54.816603 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:03:54.821582 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: ROLLBACK
+[0m21:03:54.822873 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_orders_summary_status.a7e9568b2a'
+[0m21:03:54.823249 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: Close
+[0m21:03:54.823918 [info ] [Thread-1 (]: 1 of 4 PASS not_null_orders_summary_status ..................................... [[32mPASS[0m in 0.07s]
+[0m21:03:54.824987 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:03:54.825506 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:03:54.826135 [info ] [Thread-1 (]: 2 of 4 START test not_null_revenue_by_city_city ................................ [RUN]
+[0m21:03:54.826961 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.order_intelligence.not_null_orders_summary_status.a7e9568b2a, now test.order_intelligence.not_null_revenue_by_city_city.837a02f07e)
+[0m21:03:54.827266 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:03:54.831371 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:03:54.834031 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:03:54.837747 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:03:54.839305 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:03:54.839848 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: BEGIN
+[0m21:03:54.840175 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:54.840834 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.841146 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:03:54.841464 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select city
+from "order_intelligence"."main"."revenue_by_city"
+where city is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:54.842463 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.843974 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: ROLLBACK
+[0m21:03:54.844997 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_revenue_by_city_city.837a02f07e'
+[0m21:03:54.845437 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: Close
+[0m21:03:54.846098 [info ] [Thread-1 (]: 2 of 4 PASS not_null_revenue_by_city_city ...................................... [[32mPASS[0m in 0.02s]
+[0m21:03:54.846914 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:03:54.847995 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:03:54.849197 [info ] [Thread-1 (]: 3 of 4 START test not_null_top_customers_customer_id ........................... [RUN]
+[0m21:03:54.849906 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.order_intelligence.not_null_revenue_by_city_city.837a02f07e, now test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8)
+[0m21:03:54.850220 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:03:54.853373 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:03:54.854753 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:03:54.857080 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:03:54.858412 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:03:54.858777 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: BEGIN
+[0m21:03:54.859040 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:54.859638 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.859909 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:03:54.860150 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "order_intelligence"."main"."top_customers"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:54.860977 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.862205 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: ROLLBACK
+[0m21:03:54.863356 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8'
+[0m21:03:54.865167 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: Close
+[0m21:03:54.866356 [info ] [Thread-1 (]: 3 of 4 PASS not_null_top_customers_customer_id ................................. [[32mPASS[0m in 0.02s]
+[0m21:03:54.867020 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:03:54.867332 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:03:54.867666 [info ] [Thread-1 (]: 4 of 4 START test not_null_top_products_product_id ............................. [RUN]
+[0m21:03:54.868091 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8, now test.order_intelligence.not_null_top_products_product_id.52b3a5fee8)
+[0m21:03:54.868402 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:03:54.872104 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:03:54.873821 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:03:54.876245 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:03:54.877553 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:03:54.877966 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: BEGIN
+[0m21:03:54.878261 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:54.879228 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.879697 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:03:54.880027 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "order_intelligence"."main"."top_products"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:54.882097 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:03:54.883519 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: ROLLBACK
+[0m21:03:54.884524 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_top_products_product_id.52b3a5fee8'
+[0m21:03:54.884890 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: Close
+[0m21:03:54.885398 [info ] [Thread-1 (]: 4 of 4 PASS not_null_top_products_product_id ................................... [[32mPASS[0m in 0.02s]
+[0m21:03:54.885984 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:03:54.887087 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:54.887353 [debug] [MainThread]: On master: BEGIN
+[0m21:03:54.887563 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:03:54.888077 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:03:54.888324 [debug] [MainThread]: On master: COMMIT
+[0m21:03:54.888544 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:03:54.888736 [debug] [MainThread]: On master: COMMIT
+[0m21:03:54.889077 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:03:54.889283 [debug] [MainThread]: On master: Close
+[0m21:03:54.889563 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:03:54.889764 [debug] [MainThread]: Connection 'list_order_intelligence_main' was properly closed.
+[0m21:03:54.890002 [debug] [MainThread]: Connection 'test.order_intelligence.not_null_top_products_product_id.52b3a5fee8' was properly closed.
+[0m21:03:54.890540 [info ] [MainThread]: 
+[0m21:03:54.890934 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 0.50 seconds (0.50s).
+[0m21:03:54.892003 [debug] [MainThread]: Command end result
+[0m21:03:54.911475 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:03:54.914266 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:03:54.920788 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\run_results.json
+[0m21:03:54.921293 [info ] [MainThread]: 
+[0m21:03:54.921927 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:03:54.922427 [info ] [MainThread]: 
+[0m21:03:54.923002 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:03:54.924220 [debug] [MainThread]: Command `dbt test` succeeded at 21:03:54.924064 after 4.69 seconds
+[0m21:03:54.924830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5E9DFF4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB8A60A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5EB8A6990>]}
+[0m21:03:54.925290 [debug] [MainThread]: Flushing usage events
+[0m21:03:55.501497 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:30:43.016804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020445807A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020443594410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020446A6FC50>]}
+
+
+============================== 21:30:43.030943 | 03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb ==============================
+[0m21:30:43.030943 [info ] [MainThread]: Running with dbt=1.10.20
+[0m21:30:43.035193 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DEVANSHI\\Downloads\\order-intelligence-cdc-pro-final\\order-intelligence-cdc-pro-final\\dbt\\order_intelligence\\logs'}
+[0m21:30:43.970679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020445DB4180>]}
+[0m21:30:44.049899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020447B416A0>]}
+[0m21:30:44.053990 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:30:44.549505 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m21:30:44.805449 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:30:44.805822 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:30:44.849464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020448031F50>]}
+[0m21:30:44.930292 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:30:44.937018 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:30:45.039600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020446282E40>]}
+[0m21:30:45.040393 [info ] [MainThread]: Found 6 models, 4 data tests, 475 macros
+[0m21:30:45.041672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204482503D0>]}
+[0m21:30:45.049090 [info ] [MainThread]: 
+[0m21:30:45.050196 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:30:45.051014 [info ] [MainThread]: 
+[0m21:30:45.052048 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:30:45.063583 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_order_intelligence'
+[0m21:30:45.364008 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence"
+[0m21:30:45.364736 [debug] [ThreadPool]: On list_order_intelligence: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "list_order_intelligence"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"order_intelligence"'
+    
+  
+  
+[0m21:30:45.365832 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:30:45.594855 [debug] [ThreadPool]: SQL status: OK in 0.229 seconds
+[0m21:30:45.597428 [debug] [ThreadPool]: On list_order_intelligence: Close
+[0m21:30:45.598339 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_order_intelligence, now create_order_intelligence_main)
+[0m21:30:45.599208 [debug] [ThreadPool]: Creating schema "database: "order_intelligence"
+schema: "main"
+"
+[0m21:30:45.607378 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:30:45.608127 [debug] [ThreadPool]: On create_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "create_order_intelligence_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='order_intelligence'
+        and type='sqlite'
+    
+  
+[0m21:30:45.608675 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:30:45.611144 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:30:45.612756 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:30:45.613323 [debug] [ThreadPool]: On create_order_intelligence_main: BEGIN
+[0m21:30:45.614762 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:30:45.615028 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:30:45.615262 [debug] [ThreadPool]: On create_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "create_order_intelligence_main"} */
+
+    
+    
+        create schema if not exists "order_intelligence"."main"
+    
+[0m21:30:45.617753 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:30:45.619275 [debug] [ThreadPool]: On create_order_intelligence_main: COMMIT
+[0m21:30:45.619583 [debug] [ThreadPool]: Using duckdb connection "create_order_intelligence_main"
+[0m21:30:45.620019 [debug] [ThreadPool]: On create_order_intelligence_main: COMMIT
+[0m21:30:45.621021 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:45.621472 [debug] [ThreadPool]: On create_order_intelligence_main: Close
+[0m21:30:45.625085 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_order_intelligence_main'
+[0m21:30:45.634103 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:30:45.634781 [debug] [ThreadPool]: On list_order_intelligence_main: BEGIN
+[0m21:30:45.758179 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:30:45.759399 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:30:45.760322 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:30:45.760873 [debug] [ThreadPool]: On list_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "list_order_intelligence_main"} */
+select
+      'order_intelligence' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'order_intelligence'
+  
+[0m21:30:45.780026 [debug] [ThreadPool]: SQL status: OK in 0.018 seconds
+[0m21:30:45.783664 [debug] [ThreadPool]: On list_order_intelligence_main: ROLLBACK
+[0m21:30:45.788605 [debug] [ThreadPool]: Failed to rollback 'list_order_intelligence_main'
+[0m21:30:45.789138 [debug] [ThreadPool]: On list_order_intelligence_main: Close
+[0m21:30:45.792484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020446A5C390>]}
+[0m21:30:45.793249 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:45.793808 [debug] [MainThread]: On master: BEGIN
+[0m21:30:45.794161 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:30:45.795763 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m21:30:45.796282 [debug] [MainThread]: On master: COMMIT
+[0m21:30:45.796772 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:45.797181 [debug] [MainThread]: On master: COMMIT
+[0m21:30:45.797840 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:30:45.798100 [debug] [MainThread]: On master: Close
+[0m21:30:45.812332 [debug] [Thread-1 (]: Began running node model.order_intelligence.customer_retention
+[0m21:30:45.815833 [info ] [Thread-1 (]: 1 of 6 START sql table model main.customer_retention ........................... [RUN]
+[0m21:30:45.817593 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.order_intelligence.customer_retention'
+[0m21:30:45.818416 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.customer_retention
+[0m21:30:45.826105 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.customer_retention"
+[0m21:30:45.829646 [debug] [Thread-1 (]: Began executing node model.order_intelligence.customer_retention
+[0m21:30:45.879947 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.customer_retention"
+[0m21:30:45.882606 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.883089 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: BEGIN
+[0m21:30:45.883409 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:30:45.884352 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:45.884703 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.885080 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."customer_retention__dbt_tmp"
+  
+    as (
+      with customer_orders as (
+  select
+    customer_id,
+    count(*) as total_orders,
+    round(sum(case when status != 'canceled' then total_amount else 0 end), 2) as lifetime_revenue
+  from orders_current
+  group by customer_id
+)
+select
+  c.customer_id,
+  c.customer_name,
+  c.city,
+  c.loyalty_tier,
+  co.total_orders,
+  co.lifetime_revenue,
+  case when co.total_orders > 1 then 'repeat' else 'one_time' end as customer_type
+from customer_orders co
+join customers_current c
+  on co.customer_id = c.customer_id
+order by co.lifetime_revenue desc
+    );
+  
+  
+[0m21:30:45.922680 [debug] [Thread-1 (]: SQL status: OK in 0.037 seconds
+[0m21:30:45.928401 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.928861 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'customer_retention'
+  
+[0m21:30:45.930351 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:45.932339 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.932930 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'customer_retention'
+  
+[0m21:30:45.934741 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:45.944989 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.945875 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+alter table "order_intelligence"."main"."customer_retention" rename to "customer_retention__dbt_backup"
+[0m21:30:45.949440 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:30:45.954241 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.954823 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+alter table "order_intelligence"."main"."customer_retention__dbt_tmp" rename to "customer_retention"
+[0m21:30:45.956020 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:45.985754 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: COMMIT
+[0m21:30:45.986197 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:45.986540 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: COMMIT
+[0m21:30:45.993965 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m21:30:46.000094 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.customer_retention"
+[0m21:30:46.000477 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.customer_retention"} */
+
+      drop table if exists "order_intelligence"."main"."customer_retention__dbt_backup" cascade
+    
+[0m21:30:46.007628 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m21:30:46.010827 [debug] [Thread-1 (]: On model.order_intelligence.customer_retention: Close
+[0m21:30:46.016278 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204484FDB50>]}
+[0m21:30:46.017015 [info ] [Thread-1 (]: 1 of 6 OK created sql table model main.customer_retention ...................... [[32mOK[0m in 0.19s]
+[0m21:30:46.018034 [debug] [Thread-1 (]: Finished running node model.order_intelligence.customer_retention
+[0m21:30:46.018434 [debug] [Thread-1 (]: Began running node model.order_intelligence.hourly_kpis
+[0m21:30:46.019044 [info ] [Thread-1 (]: 2 of 6 START sql table model main.hourly_kpis .................................. [RUN]
+[0m21:30:46.019740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.customer_retention, now model.order_intelligence.hourly_kpis)
+[0m21:30:46.020358 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.hourly_kpis
+[0m21:30:46.022900 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.hourly_kpis"
+[0m21:30:46.024428 [debug] [Thread-1 (]: Began executing node model.order_intelligence.hourly_kpis
+[0m21:30:46.028014 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.hourly_kpis"
+[0m21:30:46.030206 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.030787 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: BEGIN
+[0m21:30:46.031113 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:46.031925 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.032346 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.032680 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."hourly_kpis__dbt_tmp"
+  
+    as (
+      select
+  date_trunc('hour', order_ts) as order_hour,
+  count(*) as orders,
+  round(sum(case when status != 'canceled' then total_amount else 0 end), 2) as revenue,
+  round(avg(case when status != 'canceled' then total_amount end), 2) as avg_order_value
+from orders_current
+group by 1
+order by 1
+    );
+  
+  
+[0m21:30:46.042141 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m21:30:46.043549 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.043939 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'hourly_kpis'
+  
+[0m21:30:46.044998 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.046215 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.046566 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'hourly_kpis'
+  
+[0m21:30:46.047688 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.050858 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.051267 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+alter table "order_intelligence"."main"."hourly_kpis" rename to "hourly_kpis__dbt_backup"
+[0m21:30:46.052003 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:46.055029 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.055589 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+alter table "order_intelligence"."main"."hourly_kpis__dbt_tmp" rename to "hourly_kpis"
+[0m21:30:46.056720 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.058848 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: COMMIT
+[0m21:30:46.059320 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.059811 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: COMMIT
+[0m21:30:46.064475 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:30:46.067257 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.hourly_kpis"
+[0m21:30:46.067680 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.hourly_kpis"} */
+
+      drop table if exists "order_intelligence"."main"."hourly_kpis__dbt_backup" cascade
+    
+[0m21:30:46.072635 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:30:46.074440 [debug] [Thread-1 (]: On model.order_intelligence.hourly_kpis: Close
+[0m21:30:46.075077 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020448638680>]}
+[0m21:30:46.075790 [info ] [Thread-1 (]: 2 of 6 OK created sql table model main.hourly_kpis ............................. [[32mOK[0m in 0.06s]
+[0m21:30:46.076712 [debug] [Thread-1 (]: Finished running node model.order_intelligence.hourly_kpis
+[0m21:30:46.077102 [debug] [Thread-1 (]: Began running node model.order_intelligence.orders_summary
+[0m21:30:46.077600 [info ] [Thread-1 (]: 3 of 6 START sql table model main.orders_summary ............................... [RUN]
+[0m21:30:46.078287 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.hourly_kpis, now model.order_intelligence.orders_summary)
+[0m21:30:46.078568 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.orders_summary
+[0m21:30:46.080233 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.orders_summary"
+[0m21:30:46.081610 [debug] [Thread-1 (]: Began executing node model.order_intelligence.orders_summary
+[0m21:30:46.084676 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.orders_summary"
+[0m21:30:46.086208 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.086607 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: BEGIN
+[0m21:30:46.086865 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:46.087640 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.088020 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.088336 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."orders_summary__dbt_tmp"
+  
+    as (
+      select
+  status,
+  count(*) as order_count,
+  round(sum(total_amount), 2) as revenue,
+  round(avg(total_amount), 2) as avg_order_value
+from orders_current
+where status is not null
+group by status
+order by revenue desc
+    );
+  
+  
+[0m21:30:46.092643 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:30:46.094480 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.094998 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'orders_summary'
+  
+[0m21:30:46.096496 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.097863 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.098248 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'orders_summary'
+  
+[0m21:30:46.099387 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.102534 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.102984 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+alter table "order_intelligence"."main"."orders_summary" rename to "orders_summary__dbt_backup"
+[0m21:30:46.103902 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.106735 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.107111 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+alter table "order_intelligence"."main"."orders_summary__dbt_tmp" rename to "orders_summary"
+[0m21:30:46.107854 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:46.109263 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: COMMIT
+[0m21:30:46.109645 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.109951 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: COMMIT
+[0m21:30:46.114421 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:30:46.116848 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.orders_summary"
+[0m21:30:46.117239 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.orders_summary"} */
+
+      drop table if exists "order_intelligence"."main"."orders_summary__dbt_backup" cascade
+    
+[0m21:30:46.121430 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:30:46.123018 [debug] [Thread-1 (]: On model.order_intelligence.orders_summary: Close
+[0m21:30:46.123646 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020447D2DE50>]}
+[0m21:30:46.124164 [info ] [Thread-1 (]: 3 of 6 OK created sql table model main.orders_summary .......................... [[32mOK[0m in 0.05s]
+[0m21:30:46.125392 [debug] [Thread-1 (]: Finished running node model.order_intelligence.orders_summary
+[0m21:30:46.125903 [debug] [Thread-1 (]: Began running node model.order_intelligence.revenue_by_city
+[0m21:30:46.126725 [info ] [Thread-1 (]: 4 of 6 START sql table model main.revenue_by_city .............................. [RUN]
+[0m21:30:46.127552 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.orders_summary, now model.order_intelligence.revenue_by_city)
+[0m21:30:46.127849 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.revenue_by_city
+[0m21:30:46.129514 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.revenue_by_city"
+[0m21:30:46.131385 [debug] [Thread-1 (]: Began executing node model.order_intelligence.revenue_by_city
+[0m21:30:46.136344 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.revenue_by_city"
+[0m21:30:46.138561 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.139020 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: BEGIN
+[0m21:30:46.139280 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:46.140037 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.140326 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.140631 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."revenue_by_city__dbt_tmp"
+  
+    as (
+      select
+  c.city,
+  count(o.order_id) as orders,
+  round(sum(case when o.status != 'canceled' then o.total_amount else 0 end), 2) as revenue,
+  round(avg(case when o.status != 'canceled' then o.total_amount end), 2) as avg_order_value
+from orders_current o
+join customers_current c
+  on o.customer_id = c.customer_id
+group by c.city
+order by revenue desc
+    );
+  
+  
+[0m21:30:46.146170 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:30:46.147270 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.147677 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'revenue_by_city'
+  
+[0m21:30:46.149047 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.150599 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.150897 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'revenue_by_city'
+  
+[0m21:30:46.151719 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.154306 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.154670 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+alter table "order_intelligence"."main"."revenue_by_city" rename to "revenue_by_city__dbt_backup"
+[0m21:30:46.155444 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:46.158002 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.158362 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+alter table "order_intelligence"."main"."revenue_by_city__dbt_tmp" rename to "revenue_by_city"
+[0m21:30:46.159316 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:46.161075 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: COMMIT
+[0m21:30:46.161534 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.162023 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: COMMIT
+[0m21:30:46.166003 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:30:46.169312 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.revenue_by_city"
+[0m21:30:46.169950 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.revenue_by_city"} */
+
+      drop table if exists "order_intelligence"."main"."revenue_by_city__dbt_backup" cascade
+    
+[0m21:30:46.173758 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:30:46.175618 [debug] [Thread-1 (]: On model.order_intelligence.revenue_by_city: Close
+[0m21:30:46.176449 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020447D11450>]}
+[0m21:30:46.177119 [info ] [Thread-1 (]: 4 of 6 OK created sql table model main.revenue_by_city ......................... [[32mOK[0m in 0.05s]
+[0m21:30:46.177863 [debug] [Thread-1 (]: Finished running node model.order_intelligence.revenue_by_city
+[0m21:30:46.178199 [debug] [Thread-1 (]: Began running node model.order_intelligence.top_customers
+[0m21:30:46.178710 [info ] [Thread-1 (]: 5 of 6 START sql table model main.top_customers ................................ [RUN]
+[0m21:30:46.179322 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.revenue_by_city, now model.order_intelligence.top_customers)
+[0m21:30:46.179606 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.top_customers
+[0m21:30:46.181212 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.top_customers"
+[0m21:30:46.182793 [debug] [Thread-1 (]: Began executing node model.order_intelligence.top_customers
+[0m21:30:46.187493 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.top_customers"
+[0m21:30:46.190180 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.191011 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: BEGIN
+[0m21:30:46.191560 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:46.192265 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.192560 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.193017 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."top_customers__dbt_tmp"
+  
+    as (
+      select
+  c.customer_id,
+  c.customer_name,
+  c.city,
+  c.loyalty_tier,
+  count(o.order_id) as num_orders,
+  round(sum(case when o.status != 'canceled' then o.total_amount else 0 end), 2) as total_spent,
+  round(avg(case when o.status != 'canceled' then o.total_amount end), 2) as avg_order_value
+from orders_current o
+join customers_current c
+  on o.customer_id = c.customer_id
+group by c.customer_id, c.customer_name, c.city, c.loyalty_tier
+order by total_spent desc
+limit 20
+    );
+  
+  
+[0m21:30:46.207937 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m21:30:46.209619 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.210293 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'top_customers'
+  
+[0m21:30:46.211619 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.213291 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.213622 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'top_customers'
+  
+[0m21:30:46.215007 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.218489 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.218970 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+alter table "order_intelligence"."main"."top_customers" rename to "top_customers__dbt_backup"
+[0m21:30:46.219921 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:46.223299 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.223784 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+alter table "order_intelligence"."main"."top_customers__dbt_tmp" rename to "top_customers"
+[0m21:30:46.224605 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:46.226236 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: COMMIT
+[0m21:30:46.226948 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.227411 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: COMMIT
+[0m21:30:46.232908 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:30:46.235998 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_customers"
+[0m21:30:46.236563 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_customers"} */
+
+      drop table if exists "order_intelligence"."main"."top_customers__dbt_backup" cascade
+    
+[0m21:30:46.242430 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:30:46.244235 [debug] [Thread-1 (]: On model.order_intelligence.top_customers: Close
+[0m21:30:46.245215 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204486ADCC0>]}
+[0m21:30:46.245841 [info ] [Thread-1 (]: 5 of 6 OK created sql table model main.top_customers ........................... [[32mOK[0m in 0.07s]
+[0m21:30:46.246946 [debug] [Thread-1 (]: Finished running node model.order_intelligence.top_customers
+[0m21:30:46.247433 [debug] [Thread-1 (]: Began running node model.order_intelligence.top_products
+[0m21:30:46.247897 [info ] [Thread-1 (]: 6 of 6 START sql table model main.top_products ................................. [RUN]
+[0m21:30:46.248529 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.order_intelligence.top_customers, now model.order_intelligence.top_products)
+[0m21:30:46.248925 [debug] [Thread-1 (]: Began compiling node model.order_intelligence.top_products
+[0m21:30:46.250590 [debug] [Thread-1 (]: Writing injected SQL for node "model.order_intelligence.top_products"
+[0m21:30:46.252040 [debug] [Thread-1 (]: Began executing node model.order_intelligence.top_products
+[0m21:30:46.259883 [debug] [Thread-1 (]: Writing runtime sql for node "model.order_intelligence.top_products"
+[0m21:30:46.263174 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.263954 [debug] [Thread-1 (]: On model.order_intelligence.top_products: BEGIN
+[0m21:30:46.265180 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:46.266243 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.267004 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.267495 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+
+  
+    
+    
+
+    create  table
+      "order_intelligence"."main"."top_products__dbt_tmp"
+  
+    as (
+      select
+  p.product_id,
+  p.product_name,
+  p.category,
+  sum(oi.quantity) as units_sold,
+  round(sum(case when o.status != 'canceled' then oi.line_amount else 0 end), 2) as revenue
+from order_items_current oi
+join orders_current o
+  on oi.order_id = o.order_id
+join products_current p
+  on oi.product_id = p.product_id
+group by p.product_id, p.product_name, p.category
+order by revenue desc
+limit 20
+    );
+  
+  
+[0m21:30:46.275804 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m21:30:46.278787 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.279314 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'top_products'
+  
+[0m21:30:46.280516 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.282337 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.282757 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'top_products'
+  
+[0m21:30:46.284848 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:30:46.290060 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.290466 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+alter table "order_intelligence"."main"."top_products" rename to "top_products__dbt_backup"
+[0m21:30:46.291698 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.296034 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.296687 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+alter table "order_intelligence"."main"."top_products__dbt_tmp" rename to "top_products"
+[0m21:30:46.298241 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:46.303826 [debug] [Thread-1 (]: On model.order_intelligence.top_products: COMMIT
+[0m21:30:46.304731 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.305463 [debug] [Thread-1 (]: On model.order_intelligence.top_products: COMMIT
+[0m21:30:46.310480 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:30:46.315700 [debug] [Thread-1 (]: Using duckdb connection "model.order_intelligence.top_products"
+[0m21:30:46.316747 [debug] [Thread-1 (]: On model.order_intelligence.top_products: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "model.order_intelligence.top_products"} */
+
+      drop table if exists "order_intelligence"."main"."top_products__dbt_backup" cascade
+    
+[0m21:30:46.320877 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:30:46.324140 [debug] [Thread-1 (]: On model.order_intelligence.top_products: Close
+[0m21:30:46.326212 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03caa1be-a72a-46e6-b7d4-fc9b66d3e5fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020447D6BD70>]}
+[0m21:30:46.328277 [info ] [Thread-1 (]: 6 of 6 OK created sql table model main.top_products ............................ [[32mOK[0m in 0.08s]
+[0m21:30:46.329293 [debug] [Thread-1 (]: Finished running node model.order_intelligence.top_products
+[0m21:30:46.331291 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:46.331733 [debug] [MainThread]: On master: BEGIN
+[0m21:30:46.332068 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:30:46.333028 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:30:46.333796 [debug] [MainThread]: On master: COMMIT
+[0m21:30:46.334250 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:46.334612 [debug] [MainThread]: On master: COMMIT
+[0m21:30:46.335307 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:30:46.335646 [debug] [MainThread]: On master: Close
+[0m21:30:46.336093 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:30:46.336353 [debug] [MainThread]: Connection 'create_order_intelligence_main' was properly closed.
+[0m21:30:46.336673 [debug] [MainThread]: Connection 'list_order_intelligence_main' was properly closed.
+[0m21:30:46.336930 [debug] [MainThread]: Connection 'model.order_intelligence.top_products' was properly closed.
+[0m21:30:46.337699 [info ] [MainThread]: 
+[0m21:30:46.338216 [info ] [MainThread]: Finished running 6 table models in 0 hours 0 minutes and 1.29 seconds (1.29s).
+[0m21:30:46.340361 [debug] [MainThread]: Command end result
+[0m21:30:46.385430 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:30:46.389429 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:30:46.399271 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\run_results.json
+[0m21:30:46.399833 [info ] [MainThread]: 
+[0m21:30:46.400994 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:30:46.401646 [info ] [MainThread]: 
+[0m21:30:46.403305 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:30:46.405594 [debug] [MainThread]: Command `dbt run` succeeded at 21:30:46.405204 after 3.92 seconds
+[0m21:30:46.406135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020445C890D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020445D3CF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002044863E150>]}
+[0m21:30:46.406703 [debug] [MainThread]: Flushing usage events
+[0m21:30:47.108529 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:31:03.694786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF17ADFA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF15864410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF19D1BC50>]}
+
+
+============================== 21:31:03.704913 | 517af7bc-20c0-4fc2-8411-d26c4ece4db2 ==============================
+[0m21:31:03.704913 [info ] [MainThread]: Running with dbt=1.10.20
+[0m21:31:03.707774 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DEVANSHI\\Downloads\\order-intelligence-cdc-pro-final\\order-intelligence-cdc-pro-final\\dbt\\order_intelligence\\logs'}
+[0m21:31:04.309861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '517af7bc-20c0-4fc2-8411-d26c4ece4db2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF18094180>]}
+[0m21:31:04.389209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '517af7bc-20c0-4fc2-8411-d26c4ece4db2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF19E2D6A0>]}
+[0m21:31:04.395127 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:31:04.904709 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m21:31:05.105384 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:31:05.105799 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:31:05.152850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '517af7bc-20c0-4fc2-8411-d26c4ece4db2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF1A2F1E50>]}
+[0m21:31:05.232833 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:31:05.236851 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:31:05.321091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '517af7bc-20c0-4fc2-8411-d26c4ece4db2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF1A5563F0>]}
+[0m21:31:05.321685 [info ] [MainThread]: Found 6 models, 4 data tests, 475 macros
+[0m21:31:05.322325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '517af7bc-20c0-4fc2-8411-d26c4ece4db2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF1A0C3150>]}
+[0m21:31:05.326444 [info ] [MainThread]: 
+[0m21:31:05.327663 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:31:05.328182 [info ] [MainThread]: 
+[0m21:31:05.328819 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:31:05.334480 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_order_intelligence_main'
+[0m21:31:05.559700 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:31:05.560955 [debug] [ThreadPool]: On list_order_intelligence_main: BEGIN
+[0m21:31:05.561657 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:31:05.665774 [debug] [ThreadPool]: SQL status: OK in 0.104 seconds
+[0m21:31:05.666248 [debug] [ThreadPool]: Using duckdb connection "list_order_intelligence_main"
+[0m21:31:05.666576 [debug] [ThreadPool]: On list_order_intelligence_main: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "connection_name": "list_order_intelligence_main"} */
+select
+      'order_intelligence' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'order_intelligence'
+  
+[0m21:31:05.701555 [debug] [ThreadPool]: SQL status: OK in 0.035 seconds
+[0m21:31:05.704808 [debug] [ThreadPool]: On list_order_intelligence_main: ROLLBACK
+[0m21:31:05.708118 [debug] [ThreadPool]: Failed to rollback 'list_order_intelligence_main'
+[0m21:31:05.709292 [debug] [ThreadPool]: On list_order_intelligence_main: Close
+[0m21:31:05.712776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '517af7bc-20c0-4fc2-8411-d26c4ece4db2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF1A8F0BB0>]}
+[0m21:31:05.713415 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:31:05.713731 [debug] [MainThread]: On master: BEGIN
+[0m21:31:05.713998 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:31:05.714663 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:31:05.714998 [debug] [MainThread]: On master: COMMIT
+[0m21:31:05.715285 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:31:05.715575 [debug] [MainThread]: On master: COMMIT
+[0m21:31:05.716119 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:31:05.716444 [debug] [MainThread]: On master: Close
+[0m21:31:05.722679 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:31:05.723573 [info ] [Thread-1 (]: 1 of 4 START test not_null_orders_summary_status ............................... [RUN]
+[0m21:31:05.724415 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.order_intelligence.not_null_orders_summary_status.a7e9568b2a'
+[0m21:31:05.725057 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:31:05.745168 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:31:05.747630 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:31:05.777153 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:31:05.780341 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:31:05.780953 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: BEGIN
+[0m21:31:05.781855 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:31:05.782862 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:31:05.783414 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"
+[0m21:31:05.783832 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_orders_summary_status.a7e9568b2a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select status
+from "order_intelligence"."main"."orders_summary"
+where status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:31:05.791836 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m21:31:05.796983 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: ROLLBACK
+[0m21:31:05.798213 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_orders_summary_status.a7e9568b2a'
+[0m21:31:05.798584 [debug] [Thread-1 (]: On test.order_intelligence.not_null_orders_summary_status.a7e9568b2a: Close
+[0m21:31:05.799166 [info ] [Thread-1 (]: 1 of 4 PASS not_null_orders_summary_status ..................................... [[32mPASS[0m in 0.07s]
+[0m21:31:05.800099 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_orders_summary_status.a7e9568b2a
+[0m21:31:05.800520 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:31:05.800984 [info ] [Thread-1 (]: 2 of 4 START test not_null_revenue_by_city_city ................................ [RUN]
+[0m21:31:05.801549 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.order_intelligence.not_null_orders_summary_status.a7e9568b2a, now test.order_intelligence.not_null_revenue_by_city_city.837a02f07e)
+[0m21:31:05.801872 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:31:05.805636 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:31:05.807378 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:31:05.810703 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:31:05.812074 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:31:05.812579 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: BEGIN
+[0m21:31:05.812930 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:31:05.813739 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:31:05.814112 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"
+[0m21:31:05.814493 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_revenue_by_city_city.837a02f07e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select city
+from "order_intelligence"."main"."revenue_by_city"
+where city is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:31:05.815911 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:31:05.819362 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: ROLLBACK
+[0m21:31:05.820954 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_revenue_by_city_city.837a02f07e'
+[0m21:31:05.821914 [debug] [Thread-1 (]: On test.order_intelligence.not_null_revenue_by_city_city.837a02f07e: Close
+[0m21:31:05.823376 [info ] [Thread-1 (]: 2 of 4 PASS not_null_revenue_by_city_city ...................................... [[32mPASS[0m in 0.02s]
+[0m21:31:05.824433 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_revenue_by_city_city.837a02f07e
+[0m21:31:05.824787 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:31:05.825370 [info ] [Thread-1 (]: 3 of 4 START test not_null_top_customers_customer_id ........................... [RUN]
+[0m21:31:05.826817 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.order_intelligence.not_null_revenue_by_city_city.837a02f07e, now test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8)
+[0m21:31:05.827688 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:31:05.832461 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:31:05.834126 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:31:05.836470 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:31:05.837919 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:31:05.838352 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: BEGIN
+[0m21:31:05.838763 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:31:05.839957 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:31:05.840501 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"
+[0m21:31:05.841364 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "order_intelligence"."main"."top_customers"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:31:05.844482 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:31:05.846255 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: ROLLBACK
+[0m21:31:05.847645 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8'
+[0m21:31:05.848129 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8: Close
+[0m21:31:05.849006 [info ] [Thread-1 (]: 3 of 4 PASS not_null_top_customers_customer_id ................................. [[32mPASS[0m in 0.02s]
+[0m21:31:05.849753 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8
+[0m21:31:05.850160 [debug] [Thread-1 (]: Began running node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:31:05.850605 [info ] [Thread-1 (]: 4 of 4 START test not_null_top_products_product_id ............................. [RUN]
+[0m21:31:05.851143 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.order_intelligence.not_null_top_customers_customer_id.6d138c21c8, now test.order_intelligence.not_null_top_products_product_id.52b3a5fee8)
+[0m21:31:05.851467 [debug] [Thread-1 (]: Began compiling node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:31:05.857100 [debug] [Thread-1 (]: Writing injected SQL for node "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:31:05.858625 [debug] [Thread-1 (]: Began executing node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:31:05.862982 [debug] [Thread-1 (]: Writing runtime sql for node "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:31:05.864550 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:31:05.865106 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: BEGIN
+[0m21:31:05.865485 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:31:05.866141 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:31:05.866438 [debug] [Thread-1 (]: Using duckdb connection "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"
+[0m21:31:05.866736 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "order_intelligence", "target_name": "dev", "node_id": "test.order_intelligence.not_null_top_products_product_id.52b3a5fee8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "order_intelligence"."main"."top_products"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:31:05.868116 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:31:05.869760 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: ROLLBACK
+[0m21:31:05.871033 [debug] [Thread-1 (]: Failed to rollback 'test.order_intelligence.not_null_top_products_product_id.52b3a5fee8'
+[0m21:31:05.871520 [debug] [Thread-1 (]: On test.order_intelligence.not_null_top_products_product_id.52b3a5fee8: Close
+[0m21:31:05.872175 [info ] [Thread-1 (]: 4 of 4 PASS not_null_top_products_product_id ................................... [[32mPASS[0m in 0.02s]
+[0m21:31:05.872927 [debug] [Thread-1 (]: Finished running node test.order_intelligence.not_null_top_products_product_id.52b3a5fee8
+[0m21:31:05.874378 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:31:05.874814 [debug] [MainThread]: On master: BEGIN
+[0m21:31:05.875165 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:31:05.876528 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:31:05.877309 [debug] [MainThread]: On master: COMMIT
+[0m21:31:05.877665 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:31:05.877992 [debug] [MainThread]: On master: COMMIT
+[0m21:31:05.878565 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:31:05.878934 [debug] [MainThread]: On master: Close
+[0m21:31:05.879533 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:31:05.879870 [debug] [MainThread]: Connection 'list_order_intelligence_main' was properly closed.
+[0m21:31:05.880138 [debug] [MainThread]: Connection 'test.order_intelligence.not_null_top_products_product_id.52b3a5fee8' was properly closed.
+[0m21:31:05.880752 [info ] [MainThread]: 
+[0m21:31:05.881277 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 0.55 seconds (0.55s).
+[0m21:31:05.882629 [debug] [MainThread]: Command end result
+[0m21:31:05.916570 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\manifest.json
+[0m21:31:05.920132 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\semantic_manifest.json
+[0m21:31:05.929327 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DEVANSHI\Downloads\order-intelligence-cdc-pro-final\order-intelligence-cdc-pro-final\dbt\order_intelligence\target\run_results.json
+[0m21:31:05.930095 [info ] [MainThread]: 
+[0m21:31:05.931166 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:31:05.932653 [info ] [MainThread]: 
+[0m21:31:05.933707 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:31:05.935590 [debug] [MainThread]: Command `dbt test` succeeded at 21:31:05.935288 after 2.86 seconds
+[0m21:31:05.936422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF18ADB4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF1A5C60A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CF1A5C6990>]}
+[0m21:31:05.937052 [debug] [MainThread]: Flushing usage events
+[0m21:31:06.510318 [debug] [MainThread]: An error was encountered while trying to flush usage events
